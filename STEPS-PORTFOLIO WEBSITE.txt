@@ -1,0 +1,168 @@
+PORTFOLIO PROJECT STEPS
+1 CREATE FOLDER (PORTFOLIO WEBSITE)
+2 CREATE index.html
+3 USE !
+4 CHANGE <title> TAG
+5 ADD BOOTSTRAP CSS LINK INSIDE <head> TAG FROM https://getbootstrap.com/
+6 ADD BOOTSTRAP JS LINK INSIDE <body> TAG FROM https://getbootstrap.com/
+
+#NAVBAR
+1 ADD ANY NAVBAR CODE FROM https://getbootstrap.com/docs/5.3/components/navbar/#nav
+
+2 ADD THESE NAVITEMS AS <li class="nav-item"> : Home, About, Skills, Qualifications, Projects, Contact Me
+
+3 USE NAVBAR PLACEMENT CLASS FROM https://getbootstrap.com/docs/5.3/components/navbar/#placement 
+(I HAVE USED sticky-top CLASS IN <nav> TAG)
+
+4 Change this <a class="navbar-brand" href="#">Navbar</a> with your name
+
+/* NAVBAR */
+/* Transparent navbar when scrolling down */
+.navbar {
+    background-color: #712488;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgb(113, 36, 136,0.5); /* Adjust the alpha value to change transparency */
+  }
+
+  .navbar-brand,.nav-link{
+    color: white !important;
+  }
+  .navbar-toggler{
+    background-color: white !important;
+  }
+
+//NAVBAR
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+
+#HOME
+
+1 USE https://getbootstrap.com/docs/5.3/layout/grid/#stacked-to-horizontal (FOR RESPONSIVE HOME SECTION WITH TWO COLUMNS) AND MODIFY & ADD YOUR CONTENT IN IT
+
+2 IN COL-1 ADD IMAGE FROM https://storyset.com/illustration/coding/amico AND IN COL-2 ADD TEXT AND BUTTON FROM https://getbootstrap.com/docs/5.3/components/buttons/#outline-buttons & ICON IN IT FROM https://www.flaticon.com/free-icon/chat_9374883?term=contact+me&page=1&position=9&origin=search&related_id=9374883
+
+3 ADD align-items-center CLASS IN <div class="row">
+4 ADD id="home" in <div class="container text-center">
+5 ADD href="#home" in HOME NAVITEM
+
+#ABOUT
+1 CREATE HEADING WITH <h2 class="section-heading"> AND SUB-HEADING WITH <p class="sub-heading"> inside <div class="container text-center"> TAG
+
+2 CREATE style.css FILE by adding <link rel="stylesheet" href="style.css"> in <head> TAG and give styling for classes ( section-heading & sub-heading ) 
+
+3 ADD <p> TAG WITH ABOUT CONTENT 
+
+4 INSIDE <a href="Resume Tanushree Mohanty.pdf" target="_blank" ></a> 
+ADD THE SAME BUTTON FROM HOME SECTION AS RESUME BUTTON AND 
+ICON IN IT FROM https://www.flaticon.com/free-icon/resume_2815429?term=resume&page=1&position=8&origin=search&related_id=2815429
+
+5 ADD id="about" in <div class="container text-center"> ALSO col-sm-8 IN CLASS
+
+6 ADD href="#about" in ABOUT NAVITEM
+
+
+#SKILLS
+
+1  CREATE HEADING WITH <h2 class="section-heading"> AND SUB-HEADING WITH <p class="sub-heading"> inside <div class="container text-center"> TAG
+
+2 ADD id="skills" in <div class="container text-center">
+
+3 ADD href="#skills" in SKILLS NAVITEM
+
+4 INSIDE DIV, ADD ACCORDION FROM https://getbootstrap.com/docs/5.3/components/accordion/#always-open 
+
+5 CREATE <div class="row"> AND INCLUDE ALL <div class="accordion-item"> INSIDE IT
+
+6 NOW INCLUDE EACH <div class="accordion-item"> INSIDE SEPARATE <div class="col-sm">
+
+7 NOW IN EACH ACCORDION ITEM, CHANGE ACCORDION NAME  AND IN ACCORDION BODY ADD ANIMATED PROGRESS BAR FROM https://getbootstrap.com/docs/5.3/components/progress/#animated-stripes AND ADD background-color: #BA68C8 IN IT ALSO 
+
+8 ADD PROGRESS NAME IN EACH (ABOVE THE PROGRESS BAR DIV ) , NOW ADD class="progress-name" AND GIVE IT STYLING margin: 4px; text-align: start; IN STYLE.CSS, ALSO ADD ICON IN IT FROM https://www.flaticon.com/search?type=icon&search-group=all&word=HTML&license=&color=&shape=&current_section=&author_id=&pack_id=&family_id=&style_id=&type=
+
+#Qualifications
+
+1  CREATE HEADING WITH <h2 class="section-heading"> AND SUB-HEADING WITH <p class="sub-heading"> inside <div class="container text-center"> TAG
+
+2 ADD id="qualifications" in <div class="container text-center">
+
+3 ADD href="#qualifications" in Qualification NAVITEM
+
+4 add bootstrap timeline snippet from https://www.bootdey.com/snippets/view/timeline-events AND ADD HTML & CSS CODE FROM IT
+
+5 REMOVE <h6 class="card-title">Timeline</h6> THEN <div class="card"> TO REMOVE BORDER AROUND THE TIMELINE
+
+6 MAKE CHANGES IN EACH <li class="event"...
+
+7 in css of it change blue color to #BA68C8
+
+#Projects
+1  CREATE HEADING WITH <h2 class="section-heading"> AND SUB-HEADING WITH <p class="sub-heading"> inside <div class="container text-center"> TAG
+
+2 ADD CAROUSEL FROM https://getbootstrap.com/docs/5.3/components/carousel/#basic-examples
+
+3  ADD id="projects" in <div class="container text-center">
+
+4 ADD href="#projects" in Projects NAVITEM
+
+5 remove the content inside each <div class="carousel-item"> and add card in it from https://getbootstrap.com/docs/5.3/components/card/#image-caps and copy code of first card only (image on top,text on bottom)
+
+6 ADD CLASS carousel-dark IN <div id="carouselExample" class="carousel slide"> TO MAKE THE CONTROLS DARK
+
+7 in place of <div class="card mb-3" > add these two divs for each card
+
+<div class="container d-flex justify-content-center align-items-center">
+<div class="card mb-3" style="max-width: 24rem;">
+
+8 remove this <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+
+9 add a view button inside <a> TAG and add this css in style.css
+.btn{
+    background-color: #BA68C8 !important;
+    color: #fff !important;
+}
+
+project 1 will have https://tanushreemohanty.github.io/Temperature-Convertor-Bharat-Intern-Tanushree-Mohanty/
+
+project 2 index.html
+
+#CONTACT ME
+
+1 CREATE HEADING WITH <h2 class="section-heading"> AND SUB-HEADING WITH <p class="sub-heading"> inside <div class="container text-center"> TAG
+
+2 ADD id="contact" in <div class="container text-center">
+
+3 ADD href="#contact" in CONTACT ME NAVITEM
+
+4 for two partitions for image and text use  center aligned column from https://getbootstrap.com/docs/5.3/layout/columns/#vertical-alignment
+
+5 add justify-content-center in <div class="row align-items-center"> and change class="col" to class="col-sm-6"
+
+6 in partition-2 add a form from https://getbootstrap.com/docs/5.3/forms/form-control/#example and make input field as name,email,message and add this keyword->"required" (for validation) and text-center CLASS IF MENTIONED ANYWHERE IN THIS SECTION
+
+7 in partition-1 add image
+
+#FOOTER
+
+    <footer class="footer mt-4 py-3">
+      <div class="container text-center">
+          <p>Made with &hearts; by <a href="https://www.linkedin.com/in/tanushree-mohanty-69353323b/" style="text-decoration: none; color: white;">Tanushree Mohanty</a> </p>
+          <p >Copyright &copy; 2024 All rights reserved.</p>
+      </div>
+  </footer>
+
+  /* FOOTER */
+footer{
+    background-color: #712488; 
+    color: white !important;
+}
+

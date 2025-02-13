@@ -1,0 +1,24 @@
+Title: 
+🚀 How to Make a Portfolio Website using HTML, CSS, Bootstrap from Scratch  | Mini-Project | Front-end Web Development | Coding Brigaders
+
+Description:
+Welcome to another exciting tutorial by Coding Brigaders! In this tutorial, we'll walk you through the process of creating a stunning portfolio website from scratch using HTML, CSS, and Bootstrap. Whether you're a beginner looking to dive into front-end web development or an experienced coder brushing up on your skills, this tutorial is perfect for you!
+
+In this step-by-step guide, you'll learn how to structure your portfolio website using HTML, style it with CSS, and make it responsive with Bootstrap. We'll also incorporate high-quality icons and illustrations to add that extra flair to your portfolio. Plus, we'll spice things up by adding a timeline feature using a code snippet from Bootdey.
+
+🛠️ Resources Used:
+Bootstrap: Enhance your website's design and functionality with Bootstrap. Check it out at: [https://getbootstrap.com/](https://getbootstrap.com/)
+
+Icons: Access a vast collection of icons to personalize your website. Explore them at: [https://www.flaticon.com/](https://www.flaticon.com/)
+
+Illustrations: Add professional-grade illustrations in SVG format to your website. Find them at: [https://storyset.com/](https://storyset.com/)
+
+Timeline Code Snippet: Implement a sleek timeline feature using this handy code snippet. Get it here: [https://www.bootdey.com/snippets/view/timeline-events](https://www.bootdey.com/snippets/view/timeline-events)
+
+🔗 GitHub Repo (Source Code):
+Access the complete source code for this project on our GitHub repository: [https://github.com/TanushreeMohanty/Tanushree-Mohanty](https://github.com/TanushreeMohanty/Tanushree-Mohanty)
+
+🚀 Live Deployed Portfolio Website:
+Check out the live version of the portfolio website we'll be creating in this tutorial: [https://tanushreemohanty.github.io/Tanushree-Mohanty/](https://tanushreemohanty.github.io/Tanushree-Mohanty/)
+
+Don't miss out on this fantastic opportunity to enhance your front-end web development skills and create an impressive portfolio website. Watch the tutorial now and take your coding journey to the next level with Coding Brigaders!
