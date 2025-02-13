@@ -30,3 +30,6 @@ toggleSwitch.addEventListener("change", () => {
         localStorage.setItem("theme", "light");
     }
 });
+
+
+// TRIAL
