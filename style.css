@@ -1,190 +1,279 @@
-/* Dark Mode */
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-/* NAVBAR */
-.navbar{
-    background-color: #712488; 
-    transition: background-color 0.3s ease-in-out;
-    
+/* CHECKED --------------- */
+/* #COLOR VARIABLES */
+:root {
+  --primary-color: rgb(41, 40, 40);
+  --secondary-color: white;
+  --light-primary-color: gray;
+  --gradient:linear-gradient(90deg, #5A189A, #9D4EDD);
+  --hover-gradient: linear-gradient(90deg, #3C096C, #7B2CBF);
+
+
 }
 
-.navbar.scrolled{ /* TRANSPARENT NAVBAR WHEN SCROLLED */
-    background-color: rgb(113,36,136,0.5); 
+/* #NAVBAR */
+.navbar {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.navbar-brand,.nav-link{
-    color: white !important;
-    
+/* Transparent Navbar When Scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar-toggler{
-    background-color: white !important;
+/* Navbar Brand & Links */
+.navbar-brand,
+.nav-link {
+  color: var(--secondary-color) !important;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
+/* Modern Underline Effect on Hover */
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Change Text Color on Hover */
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  background-color: var(--secondary-color) !important;
+}
+
+/* Reverse Navbar Collapse */
 .navbar-expand-lg .navbar-collapse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-/* BUTTON */
+/* #BUTTON */
 .btn{
-    background-color: #BA68C8 !important;
-    color: white !important;
+  background-color: black !important;
+  color: var(--secondary-color) !important;
 }
 
-/* HEADINGS */
+/* #HEADINGS */
 .section-heading{
-    margin-top: 35px;
-    text-align: center;
+  margin-top: 35px;
+  text-align: center;
 }
 
 .sub-heading{
-    text-align: center;
-    color: gray;
+  text-align: center;
+  color: var(--light-primary-color);
 }
 
-/* SKILLS */
+/* #HOME */
+.highlight {
+  color: #874CCC;
+  font-weight: bold;
+}
+
+.custom-btn {
+  background: var(--gradient);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover {
+  background: var(--hover-gradient);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.social-icons a {
+  color: var(--light-primary-color);
+  font-size: 24px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--gradient);
+  transform: scale(1.2);
+}
+
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* #SKILLS */
 .progress-name{
-    margin-top: 15px;
-    margin-bottom: 4px;
-    text-align: start;
+  margin-top: 15px;
+  margin-bottom: 4px;
+  text-align: start;
 }
 .progress-bar{
-    background-color: #BA68C8 !important;
+  background-color: var(--primary-color) !important;
 }
 
-/* EDUCATION */
+/* #EDUCATION */
 .timeline {
-    border-left: 3px solid #BA68C8;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    background: rgba(114, 124, 245, 0.09);
-    margin: 0 auto;
-    letter-spacing: 0.2px;
-    position: relative;
-    line-height: 1.4em;
-    font-size: 1.03em;
-    padding: 50px;
-    list-style: none;
-    text-align: left;
-    max-width: 40%;
+  border-left: 3px solid black;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: rgba(0, 0, 0, 0.09);
+  margin: 0 auto;
+  letter-spacing: 0.2px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  max-width: 40%;
 }
 
 @media (max-width: 767px) {
-    .timeline {
-        max-width: 98%;
-        padding: 25px;
-    }
+  .timeline {
+      max-width: 98%;
+      padding: 25px;
+  }
 }
 
 .timeline h1 {
-    font-weight: 300;
-    font-size: 1.4em;
+  font-weight: 300;
+  font-size: 1.4em;
 }
 
 .timeline h2,
 .timeline h3 {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .timeline .event {
-    border-bottom: 1px dashed #BA68C8;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    position: relative;
+  border-bottom: 1px dashed black;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
-    .timeline .event {
-        padding-top: 30px;
-    }
+  .timeline .event {
+      padding-top: 30px;
+  }
 }
 
 .timeline .event:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
 }
 
 .timeline .event:before,
 .timeline .event:after {
-    position: absolute;
-    display: block;
-    top: 0;
+  position: absolute;
+  display: block;
+  top: 0;
 }
 
 .timeline .event:before {
-    left: -207px;
-    content: attr(data-date);
-    text-align: right;
-    font-weight: 100;
-    font-size: 0.9em;
-    min-width: 120px;
+  left: -207px;
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
 }
 
 @media (max-width: 767px) {
-    .timeline .event:before {
-        left: 0px;
-        text-align: left;
-    }
+  .timeline .event:before {
+      left: 0px;
+      text-align: left;
+  }
 }
 
 .timeline .event:after {
-    -webkit-box-shadow: 0 0 0 3px #BA68C8;
-    box-shadow: 0 0 0 3px #BA68C8;
-    left: -55.8px;
-    background: #fff;
-    border-radius: 50%;
-    height: 9px;
-    width: 9px;
-    content: "";
-    top: 5px;
+  -webkit-box-shadow: 0 0 0 3px black;
+  box-shadow: 0 0 0 3px black;
+  left: -55.8px;
+  background: rgb(227, 224, 224);
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  content: "";
+  top: 5px;
 }
 
 @media (max-width: 767px) {
-    .timeline .event:after {
-        left: -31.8px;
-    }
+  .timeline .event:after {
+      left: -31.8px;
+  }
 }
 
 .rtl .timeline {
-    border-left: 0;
-    text-align: right;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-    border-right: 3px solid #BA68C8;
+  border-left: 0;
+  text-align: right;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-right: 3px solid black;
 }
 
 .rtl .timeline .event::before {
-    left: 0;
-    right: -170px;
+  left: 0;
+  right: -170px;
 }
 
 .rtl .timeline .event::after {
-    left: 0;
-    right: -55.8px;
+  left: 0;
+  right: -55.8px;
 }
 
-/* FOOTER */
+/* #FOOTER */
 footer{
-    background-color: #712488;
-    color: white;
-    width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 100%;
 }
 
-/* Light/Dark Mode */
-/* Dark Mode */
+/* #Dark Mode */
 .dark-mode {
-  background-color: black;
+  background-color: var(--primary-color);
   color: white;
 }
 
-/* Toggle Switch */
+
+/* #Toggle Switch For light/dark mode */
 .switch {
   font-size: 17px;
   position: relative;
@@ -251,8 +340,7 @@ footer{
   transform: translateX(30px);
 }
 
-
-/* From Uiverse.io by wilsondesouza */ 
+/* #Social media icons From Uiverse.io by wilsondesouza */ 
 ul {
   list-style: none;
 }
@@ -349,5 +437,5 @@ ul {
   background-color: #ff0000;
 }
 
+/* Unchecked---------------------- */
 
-/* TRIAL */
